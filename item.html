@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成熟への第一歩：他者依存段階の理解とAIコーチング</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@500;700&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lucide/0.263.1/lucide.min.js"></script>
+    <style>
+        body {
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: #f3f4f6;
+            color: #374151;
+            line-height: 1.8;
+        }
+        h1, h2, h3 {
+            font-family: 'Noto Serif JP', serif;
+        }
+        .print-container {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+        @media print {
+            body { background: white; }
+            .print-container { box-shadow: none; max-width: 100%; margin: 0; }
+            .no-print { display: none; }
+        }
+        .stage-box {
+            transition: all 0.3s ease;
+        }
+        .stage-box:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        /* Loading animation dots */
+        .loading-dots::after {
+            content: ' .';
+            animation: dots 1s steps(5, end) infinite;
+        }
+        @keyframes dots {
+            0%, 20% { content: ' .'; }
+            40% { content: ' ..'; }
+            60% { content: ' ...'; }
+            80%, 100% { content: ''; }
+        }
+    </style>
+</head>
+<body class="p-4 md:p-8">
+
+    <!-- Actions Bar -->
+    <div class="max-w-4xl mx-auto mb-6 flex justify-end gap-2 no-print">
+        <button onclick="window.print()" class="flex items-center gap-2 px-4 py-2 bg-slate-700 text-white rounded hover:bg-slate-600 transition-colors">
+            <i data-lucide="printer" class="w-4 h-4"></i> 印刷 / PDF保存
+        </button>
+    </div>
+
+    <!-- Document Container -->
+    <div class="print-container rounded-lg overflow-hidden">
+        
+        <!-- Header -->
+        <header class="bg-slate-800 text-white p-8 md:p-12 text-center">
+            <div class="inline-block px-3 py-1 border border-slate-400 rounded-full text-xs tracking-wider mb-4 uppercase">Leadership Development Material</div>
+            <h1 class="text-2xl md:text-4xl font-bold mb-4">成熟への第一歩：<br/>「他者依存段階」の理解と克服</h1>
+            <p class="text-slate-300 max-w-2xl mx-auto text-sm md:text-base">
+                なぜ多くの成人が「依存」の状態に留まるのか。<br/>
+                『7つの習慣』と『成人発達理論』の観点から読み解く成長のロードマップ。
+            </p>
+        </header>
+
+        <!-- Main Content -->
+        <main class="p-8 md:p-12">
+
+            <!-- Section 1: Intro -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-3">
+                    <i data-lucide="anchor" class="text-blue-600"></i>
+                    1. 「他者依存」とは何か？
+                </h2>
+                <p class="mb-4 text-justify">
+                    「他者依存段階（Dependency）」とは、成長の連続体における最初のステージであり、物事の結果や責任の所在を<strong>「自分以外（あなた）」</strong>に求める精神状態を指します。
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r my-6">
+                    <p class="font-bold text-blue-800 mb-1">【他者依存の口癖（パラダイム）】</p>
+                    <p class="text-blue-900 italic">
+                        「<strong>あなた</strong>が私の世話をする」「<strong>あなた</strong>が結果の責任を取る」「<strong>あなた</strong>が失敗したからこうなった」「環境が悪いからできない」
+                    </p>
+                </div>
+                <p>
+                    この段階にいる人は、自分の人生の主導権（ハンドル）を他者に預けてしまっているため、状況を自ら変える力が発揮できません。
+                </p>
+            </section>
+
+            <!-- Section 2: 7 Habits Perspective -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-3">
+                    <i data-lucide="trending-up" class="text-blue-600"></i>
+                    2. 成長の3つのステージ
+                </h2>
+                <p class="mb-6">スティーブン・コヴィー博士は、人の成長を以下の3段階で定義しました。</p>
+                
+                <div class="grid md:grid-cols-3 gap-4 mb-8">
+                    <!-- Stage 1 -->
+                    <div class="stage-box bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <div class="text-center mb-4">
+                            <span class="bg-slate-200 text-slate-600 px-2 py-1 rounded text-xs font-bold">第1段階</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-700 text-center mb-2">依存<br/><span class="text-sm font-normal text-slate-500">(Dependence)</span></h3>
+                        <div class="text-center text-3xl font-bold text-blue-600 mb-4">You</div>
+                        <p class="text-sm text-slate-600 text-center">「あなた」頼み。<br/>欲しいものを得るために他者の力を必要とする。</p>
+                    </div>
+                    
+                    <!-- Stage 2 -->
+                    <div class="stage-box bg-white p-6 rounded-lg border-2 border-blue-100 shadow-sm relative overflow-hidden">
+                        <div class="absolute top-0 right-0 bg-blue-500 text-white text-xs px-2 py-1 rounded-bl">目標</div>
+                        <div class="text-center mb-4">
+                            <span class="bg-blue-100 text-blue-600 px-2 py-1 rounded text-xs font-bold">第2段階</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-800 text-center mb-2">自立<br/><span class="text-sm font-normal text-slate-500">(Independence)</span></h3>
+                        <div class="text-center text-3xl font-bold text-blue-600 mb-4">I</div>
+                        <p class="text-sm text-slate-600 text-center">「私」がやる。<br/>自分の努力と能力で目標を達成できる。</p>
+                    </div>
+
+                    <!-- Stage 3 -->
+                    <div class="stage-box bg-slate-50 p-6 rounded-lg border border-slate-200">
+                        <div class="text-center mb-4">
+                            <span class="bg-slate-200 text-slate-600 px-2 py-1 rounded text-xs font-bold">第3段階</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-slate-700 text-center mb-2">相互依存<br/><span class="text-sm font-normal text-slate-500">(Interdependence)</span></h3>
+                        <div class="text-center text-3xl font-bold text-blue-600 mb-4">We</div>
+                        <p class="text-sm text-slate-600 text-center">「私たち」で創る。<br/>自立した個が協力し、最大の成果を生む。</p>
+                    </div>
+                </div>
+                <p class="text-sm text-slate-500 text-center">※真のチームワーク（相互依存）は、個々の「自立」があって初めて成立します。</p>
+            </section>
+
+            <!-- Section 3: Adult Development Theory -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-3">
+                    <i data-lucide="users" class="text-blue-600"></i>
+                    3. 成人の70%が「依存段階」という衝撃
+                </h2>
+                <div class="flex flex-col md:flex-row gap-8 items-start">
+                    <div class="flex-1">
+                        <p class="mb-4 text-justify">
+                            ハーバード大学のロバート・キーガン教授の「成人発達理論」によると、成人の約70%は<strong>「他者依存段階（慣習的段階）」</strong>に留まっているとされています。
+                        </p>
+                        <p class="mb-4 text-justify">
+                            これは必ずしも「能力が低い」という意味ではありません。組織のルールを守り、協調性があり、社会人として十分に機能します。しかし、<strong>「自分の価値観（内なる指針）」を持たず、判断基準を常に外部（会社、上司、常識）に置いている</strong>状態です。
+                        </p>
+                    </div>
+                    <div class="w-full md:w-64 bg-slate-100 p-5 rounded-lg flex-shrink-0">
+                        <h4 class="font-bold text-slate-700 mb-3 border-b border-slate-300 pb-2">成人の発達分布目安</h4>
+                        <ul class="space-y-3 text-sm">
+                            <li class="flex justify-between items-center">
+                                <span>自己主導 (自立)</span>
+                                <span class="font-bold text-slate-400">20%</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-white p-2 rounded shadow-sm border-l-4 border-blue-500">
+                                <span class="font-bold text-blue-800">他者依存 (慣習)</span>
+                                <span class="font-bold text-blue-600">70%</span>
+                            </li>
+                            <li class="flex justify-between items-center">
+                                <span>道具主義 (利己)</span>
+                                <span class="font-bold text-slate-400">10%</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Detailed Table -->
+                <div class="mt-8 overflow-x-auto">
+                    <table class="w-full text-sm text-left border-collapse">
+                        <thead>
+                            <tr class="bg-slate-800 text-white">
+                                <th class="p-3 rounded-tl">特徴</th>
+                                <th class="p-3 w-1/2">他者依存段階（70%）</th>
+                                <th class="p-3 w-1/2 rounded-tr bg-blue-700">自己主導段階（20%）</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-slate-200">
+                            <tr>
+                                <td class="p-3 font-bold bg-slate-50">判断基準</td>
+                                <td class="p-3">他者・組織・ルール・社会通念<br/><span class="text-xs text-slate-500">「上司が言ったから」「普通こうだから」</span></td>
+                                <td class="p-3 bg-blue-50">自分の内なる価値観・信念<br/><span class="text-xs text-blue-600">「私の信念に基づきこう判断する」</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold bg-slate-50">行動様式</td>
+                                <td class="p-3">指示待ち、順応、同調<br/><span class="text-xs text-slate-500">和を乱すことを恐れる</span></td>
+                                <td class="p-3 bg-blue-50">主体的、自律的<br/><span class="text-xs text-blue-600">必要な対立を恐れない</span></td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-bold bg-slate-50">弱点</td>
+                                <td class="p-3">環境の変化に弱く、被害者意識を持ちやすい</td>
+                                <td class="p-3 bg-blue-50">独善的になりすぎる可能性がある</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- Section 4: Action Plan -->
+            <section class="mb-12">
+                <h2 class="text-2xl font-bold text-slate-800 border-b-2 border-slate-200 pb-2 mb-6 flex items-center gap-3">
+                    <i data-lucide="compass" class="text-blue-600"></i>
+                    4. 自立への処方箋
+                </h2>
+                <div class="grid md:grid-cols-2 gap-6">
+                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-lg text-slate-700 mb-3 flex items-center gap-2">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm">1</span>
+                            言葉を変える
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-4">
+                            「反応的な言葉」を捨て、「主体的な言葉」を使うことで、脳の認識を変えます。
+                        </p>
+                        <div class="bg-slate-50 p-3 rounded text-sm">
+                            <div class="flex justify-between mb-2 border-b border-slate-200 pb-2">
+                                <span class="text-red-500">× 彼は私を怒らせた</span>
+                                <span class="text-green-600 font-bold">○ 私は怒ることを選択した</span>
+                            </div>
+                            <div class="flex justify-between">
+                                <span class="text-red-500">× 時間がない</span>
+                                <span class="text-green-600 font-bold">○ 私は他のことを優先している</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-slate-200 p-6 rounded-lg shadow-sm">
+                        <h3 class="font-bold text-lg text-slate-700 mb-3 flex items-center gap-2">
+                            <span class="bg-blue-600 text-white w-6 h-6 rounded-full flex items-center justify-center text-sm">2</span>
+                            自分との約束を守る
+                        </h3>
+                        <p class="text-sm text-slate-600 mb-4">
+                            他人の評価ではなく、自分の行動に信頼を置く「自己信頼口座」に残高を貯めます。
+                        </p>
+                        <ul class="list-disc list-inside text-sm text-slate-600 space-y-1">
+                            <li>小さな約束をして、必ず守る（例：毎日靴を揃える）</li>
+                            <li>「影響の輪（自分が変えられること）」だけに集中する</li>
+                            <li>自分の価値観を書き出してみる</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- New Section 5: AI Tools -->
+            <section class="mb-8 no-print bg-indigo-50 p-6 rounded-lg border border-indigo-100">
+                <h2 class="text-2xl font-bold text-indigo-900 mb-4 flex items-center gap-2">
+                    <i data-lucide="sparkles" class="text-indigo-600"></i>
+                    5. AI メンタル・コーチング
+                </h2>
+                <p class="mb-6 text-indigo-800 text-sm md:text-base">
+                    Gemini AIを活用して、あなたの思考パターンを「自立」へと導くサポートをします。自分自身の課題を入力して、AIコーチのアドバイスを受けてみましょう。
+                </p>
+        
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Tool 1: Reframing -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-indigo-50 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="font-bold text-lg text-slate-700 mb-2 flex items-center gap-2">
+                                <i data-lucide="refresh-cw" class="w-4 h-4 text-green-600"></i> 言葉のリフレーミング
+                            </h3>
+                            <p class="text-xs text-slate-500 mb-4">つい口にしてしまう「愚痴」や「他責」の言葉を入力してください。AIがそれを「主体的」な言葉に変換します。</p>
+                            <textarea id="reframeInput" class="w-full p-3 border border-slate-300 rounded mb-3 text-sm focus:ring-2 focus:ring-indigo-300 outline-none" rows="3" placeholder="例：上司の指示が毎回曖昧で、やる気が出ない..."></textarea>
+                            <button id="reframeBtn" class="w-full bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 flex items-center justify-center gap-2 transition-colors text-sm font-bold shadow-sm">
+                                主体的に書き換える ✨
+                            </button>
+                        </div>
+                        <div id="reframeResult" class="mt-4 hidden p-4 bg-green-50 text-green-800 rounded border border-green-200 text-sm"></div>
+                    </div>
+        
+                    <!-- Tool 2: Scenario Analysis -->
+                    <div class="bg-white p-6 rounded-lg shadow-sm border border-indigo-50 flex flex-col h-full">
+                        <div class="flex-grow">
+                            <h3 class="font-bold text-lg text-slate-700 mb-2 flex items-center gap-2">
+                                <i data-lucide="search" class="w-4 h-4 text-blue-600"></i> 現状の成熟度診断
+                            </h3>
+                            <p class="text-xs text-slate-500 mb-4">最近の悩みやトラブルを書いてください。現在の思考段階（依存・自立・相互依存）を分析し、アドバイスします。</p>
+                            <textarea id="analyzeInput" class="w-full p-3 border border-slate-300 rounded mb-3 text-sm focus:ring-2 focus:ring-indigo-300 outline-none" rows="3" placeholder="例：同僚が期限を守らず、私の仕事が進まなくてイライラした。彼を問い詰めたら逆ギレされた。"></textarea>
+                            <button id="analyzeBtn" class="w-full bg-indigo-600 text-white px-4 py-2 rounded hover:bg-indigo-700 flex items-center justify-center gap-2 transition-colors text-sm font-bold shadow-sm">
+                                思考段階を分析する ✨
+                            </button>
+                        </div>
+                        <div id="analyzeResult" class="mt-4 hidden p-4 bg-blue-50 text-blue-800 rounded border border-blue-200 text-sm whitespace-pre-wrap leading-relaxed"></div>
+                    </div>
+                </div>
+            </section>
+
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-slate-100 p-8 text-center text-slate-500 text-sm border-t border-slate-200">
+            <p>参考文献：スティーブン・R・コヴィー『7つの習慣』 / ロバート・キーガン『なぜ人と組織は変われないのか』</p>
+            <p class="mt-2">Created with AI Assistant & Powered by Gemini</p>
+        </footer>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+
+    <script type="module">
+        import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
+
+        // Helper function to call Gemini API
+        async function callGemini(prompt, outputElementId, buttonId, originalBtnText) {
+            const apiKey = ""; // API Key handled by environment
+            const outputEl = document.getElementById(outputElementId);
+            const btnEl = document.getElementById(buttonId);
+
+            if (!prompt || prompt.trim() === "") {
+                alert("テキストを入力してください。");
+                return;
+            }
+
+            try {
+                // UI Loading State
+                btnEl.disabled = true;
+                btnEl.innerHTML = `考え中<span class="loading-dots"></span>`;
+                outputEl.classList.remove('hidden');
+                outputEl.textContent = "AIが分析中...";
+
+                const genAI = new GoogleGenerativeAI(apiKey);
+                const model = genAI.getGenerativeModel({ model: "gemini-2.5-flash-preview-09-2025" });
+
+                const result = await model.generateContent(prompt);
+                const response = await result.response;
+                const text = response.text();
+
+                // Display Result
+                outputEl.innerHTML = text.replace(/\n/g, '<br>'); // Simple line break handling
+                
+            } catch (error) {
+                console.error("Error calling Gemini:", error);
+                outputEl.textContent = "エラーが発生しました。もう一度お試しください。";
+            } finally {
+                // Restore Button State
+                btnEl.disabled = false;
+                btnEl.innerHTML = originalBtnText;
+            }
+        }
+
+        // Feature 1: Reframing Tool
+        document.getElementById('reframeBtn').addEventListener('click', () => {
+            const userInput = document.getElementById('reframeInput').value;
+            const prompt = `あなたは『7つの習慣』の専門家コーチです。以下のユーザーの発言は「他者依存（Reactive）」な思考に基づいています。
+            これを「主体的（Proactive）」で「自立（Independence）」した思考に基づいた言葉に書き換えてください。
+            
+            要件:
+            1. 主語を「私（I）」にする。
+            2. 自分がコントロールできる行動にフォーカスする。
+            3. 前向きで力強いトーンにする。
+            4. 解説は不要。書き換えた言葉だけを提示する。
+
+            ユーザーの発言: "${userInput}"`;
+
+            callGemini(prompt, 'reframeResult', 'reframeBtn', '主体的に書き換える ✨');
+        });
+
+        // Feature 2: Maturity Analysis Tool
+        document.getElementById('analyzeBtn').addEventListener('click', () => {
+            const userInput = document.getElementById('analyzeInput').value;
+            const prompt = `あなたは成人発達理論（ロバート・キーガン）と『7つの習慣』の専門家です。
+            以下のユーザーのエピソードを分析し、簡潔にアドバイスしてください。
+
+            ユーザーのエピソード: "${userInput}"
+
+            出力フォーマット（日本語）:
+            1. **推定段階**: （他者依存 / 自立 / 相互依存 のいずれか）
+            2. **分析**: なぜそう判断したか、思考の癖を1〜2文で解説。
+            3. **次のステップ**: 次の段階に進むための具体的な行動アドバイスを1つ。
+            
+            丁寧かつ励ますような口調で書いてください。`;
+
+            callGemini(prompt, 'analyzeResult', 'analyzeBtn', '思考段階を分析する ✨');
+        });
+
+    </script>
+</body>
+</html>
